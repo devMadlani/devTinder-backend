@@ -5,7 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 const session = require("express-session");
 const connectDb = require("./config/database");
-
+require("./utils/cronjob");
 const app = express();
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
